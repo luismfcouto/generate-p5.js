@@ -172,18 +172,18 @@ function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
   const file = fileList[0]
   console.log(file)
-
   var reader = new FileReader();
-
   reader.onload = function(e) {
     if (file.type === 'image/png' || file.type === 'image/jpeg' || file.type === 'image/jpg') {
-      img = loadImage(e.target.result, '');
+      img = loadImage(e.target.result, resizeCallback);
       //img.hide();
     } else {
       img = null;
       print('hello')
     }
   }
-
   reader.readAsDataURL(file);
+}
+function resizeCallback(){
+        img.resize(1320, 1320);
 }
