@@ -1,12 +1,75 @@
 <!DOCTYPE html><html lang="en"><head>
-    <script src="p5.js"></script>
-    <script src="p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8">
+  <script src="p5.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
 
-  </head>
-  <body>
-      <script src="sketch.js"></script>
-  
+</head>
+
+<body>
+  <script src="sketch.js"></script>
+
+  <div class="dropdown">
+    <button class="helpbtn" style="font-family: Montserrat; font-style:normal; font-weight: bold; font-size: 14px; line-height: 17px;">HELP</button>
+    <div class="dropdown-content">
+      <p style="font-family: Montserrat; font-style: normal; font-weight: bold; font-size: 16px; line-height: 27px; color: #6B6B6B;">
+        + On your keyboard, press:<br>
+        <span style="color:white">X, Y or Z</span> to turn the camera towards its correspondent axis.<br>
+        <br>
+        + To rotate<span style="color:white">click, hold and drag</span> your cursor within the canvas.<br>
+        <br>
+        + To zoom in and out use your <span style="color:white">mousewheel</span>.
+      </p>
+    </div>
+  </div>
+
+  <div class="rect-changes"></div>
+  <div id="jpeg-box"></div>
+  <div id="png-box"></div>
+  <div id="canvas-container">
+    <div class="canvas"></div>
+  </div>
+  <div class="controls">
+    <input id="control-picker" type="color" value="#000000" style="border: 3px solid #6B6B6B; box-sizing: border-box; border-radius: 5px; background: #171717;">
+    <input id="control-picker-bg" type="color" value="#f1f1f1" style="border: 3px solid #6B6B6B; box-sizing: border-box; border-radius: 5px; background: #171717;">
+    <input id="range-distance" type="range" min="0" max="2500" value="0">
+    <input id="range-density" type="range" min="0" max="200" value="50">
+    <input id="range-size" type="range" min="0.1" max="2" step="0.1" value="0.5">
+    <input id="file-input" type="file">
+  </div>
+
+  <div id="type1">
+    <p style="position: absolute; width: 166px; height: 24px; left: 1531px; top: 20px;">UPLOAD IMAGE</p>
+    <p style="position: absolute; width: 91px; height: 24px; left: 1531px; top: 165px;">COLOUR</p>
+    <p style="position: absolute; width: 77px; height: 24px; left: 1531px; top: 299px;">ROTATION</p>
+    <p style="position: absolute; width: 59px; height: 24px; left: 1531px; top: 437px;">DOTS</p>
+    <p style="position: absolute; width: 133px; height: 24px; left: 1531px; top: 702px;">DOWNLOAD</p>
+    <p id="textJ" style="position: absolute; width: 38px; height: 17px; left: 1586px; top: 751px; cursor: pointer;">JPEG</p>
+    <p style="position: absolute; width: 33px; height: 17px; left: 1799px; top: 751px; cursor: pointer;">PNG</p>
+  </div>
+
+  <div id="type2">
+    <p style="position: absolute; width: 143px; height: 27px; left: 1571px; top: 207px;">Background</p>
+    <p style="position: absolute; width: 34px; height: 27px; left: 1742px; top: 207px;">Fill</p>
+    <p style="position: absolute; width: 34px; height: 27px; left: 1834px; top: 197px;">Image Colour</p>
+    <p style="position: absolute; width: 27px; height: 27px; left: 1571px; top: 339px;">On</p>
+    <p style="position: absolute; width: 34px; height: 27px; left: 1742px; top: 339px;">Off</p>
+    <p style="position: absolute; width: 102px; height: 27px; left: 1531px; top: 599px;">Distance</p>
+    <p style="position: absolute; width: 47px; height: 27px; left: 1531px; top: 533px;">Size</p>
+    <p style="position: absolute; width: 89px; height: 27px; left: 1531px; top: 466px;">Density</p>
+    <p style="position: absolute; width: 361px; height: 40px; left: 1531px; top: 836px;"><span style="color:white; font-family: Montserrat; font-style: normal; font-weight: normal;">©</span> Luís Fernandes Couto, 18021615</p>
+    <p style="position: absolute; width: 350px; height: 20px; left: 1549px; top: 855px;">london college of communication, 2021</p>
+  </div>
+
+  <div class="change-separator1"></div>
+  <div class="change-separator2"></div>
+  <div class="change-separator3"></div>
+  <div class="change-separator4"></div>
+  <div class="change-separator5"></div>
+  <button id="on"></button>
+  <button id="off"></button>
+  <button id="img-colour"></button>
+
+
 
 </body></html>

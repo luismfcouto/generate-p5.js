@@ -1,8 +1,285 @@
 html, body {
   margin: 0;
   padding: 0;
+  background: #0A0A0A;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
+/* body {
+  display: flex;
+  flex-direction: row-reverse;
+}
+*/
 canvas {
   display: block;
+  /* width: 100% !important; */
+}
+
+#canvas-container {
+  position: absolute;
+  width: 1320px;
+  height:800px;
+  left: 100px;
+  top: 50px;
+}
+
+#control-picker-bg {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1532px;
+  top: 217px;
+  border-radius: 2px;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#control-picker {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1703px;
+  top: 217px;
+  border-radius: 2px;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#range-distance {
+  position: absolute;
+  width: 360px;
+  height: 4px;
+  left: 1530px;
+  top: 654px;
+}
+
+#range-size {
+  position: absolute;
+  width: 360px;
+  height: 4px;
+  left: 1530px;
+  top: 587px;
+}
+
+#range-density {
+  position: absolute;
+  width: 360px;
+  height: 4px;
+  left: 1530px;
+  top: 520px;
+}
+
+#file-input {
+  position: absolute;
+  width: 360px;
+  height: 50px;
+  left: 1531px;
+  top: 68px;
+  background: #242424;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+#type1 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17,07px;
+  color: #FFFFFF;
+}
+
+#type2 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19,5px;
+  color: #6B6B6B;
+}
+
+.rect-changes {
+  position: absolute;
+  width: 405px;
+  height: 930px;
+  left: 1520px;
+  top: 0px;
+  background: #171717;
+}
+
+.change-separator1 {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  left: 1520px;
+  top: 149px;
+  border: 2px solid #242424;
+}
+
+.change-separator2 {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  left: 1520px;
+  top: 283px;
+  border: 2px solid #242424;
+}
+
+.change-separator3 {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  left: 1520px;
+  top: 420px;
+  border: 2px solid #242424;
+}
+
+.change-separator4 {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  left: 1520px;
+  top: 686px;
+  border: 2px solid #242424;
+}
+
+.change-separator5 {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  left: 1520px;
+  top: 826px;
+  border: 2px solid #242424;
+}
+
+#jpeg-box {
+  position: absolute;
+  width: 150px;
+  height: 46px;
+  left: 1531px;
+  top: 750px;
+  background: #242424;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+#jpeg-box:hover {
+  background: #0075ff;
+  border: 1px solid #FFFFFF;
+}
+
+
+#png-box {
+  position: absolute;
+  width: 150px;
+  height: 46px;
+  left: 1741px;
+  top: 750px;
+  background: #242424;
+  border: 1px solid #FFFFFF;
+  box-sizing: bordeoox;
+  border-radius: 5px; 
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+#png-box:hover {
+  background: #0075ff;
+  border: 1px solid #FFFFFF;
+}
+
+#on {
+  border: 3px solid #6B6B6B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1531px;
+  top: 349px;
+  background: none;
+}
+
+#off {
+  border: 3px solid #6B6B6B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1703px;
+  top: 349px;
+  background: none;
+}
+
+#img-colour{
+  border: 3px solid #6B6B6B;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 1795px;
+  top: 217px;
+  background: none;
+}
+
+.helpbtn {
+  position: absolute;
+  background-color: #242424;
+  color: white;
+  width: 91px;
+  height: 35px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+  top: 217px;
+  left: -16px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+.dropdown-content {
+  top: 262px;
+  left: -5px;
+  display: none;
+  padding: 0px 20px;
+  position: absolute;
+  background-color: #242424;
+  min-width: 200px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover
+
+.dropdown-content {
+  display: block;
+}
+
+.dropdown:hover
+
+.helpbtn {
+  background-color: #0075ff;
 }
